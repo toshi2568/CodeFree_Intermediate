@@ -1,0 +1,14 @@
+.text-block {
+  background: #e6e9ec;
+  text-align: center;
+}
+.text-block h1 {
+  font-size: 2.5rem;
+}
+.text-block p {
+  width: 50%;
+  margin: 0 auto 40px;
+}
+.text-block a {
+  color: blue;
+}/*# sourceMappingURL=style.css.map */
