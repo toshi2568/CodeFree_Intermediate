@@ -1,14 +1,214 @@
-.text-block {
-  background: #e6e9ec;
-  text-align: center;
+@charset "UTF-8";
+/* ------------
+base
+------------ */
+html {
+  -webkit-appearance: none;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  word-break: break-all;
+  font-size: 10px;
 }
-.text-block h1 {
-  font-size: 2.5rem;
+
+body {
+  font-family: "Yu Mincho", "YuMincho", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.5625;
+  color: #000000;
 }
-.text-block p {
-  width: 50%;
-  margin: 0 auto 40px;
+
+#container {
+  width: 100%;
+  overflow: hidden;
 }
-.text-block a {
-  color: blue;
+
+/* ----------
+common
+------------*/
+/* PC、SPの非表示 */
+@media (max-width: 767px) {
+  .pc {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .sp {
+    display: none;
+  }
+}
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.inner {
+  max-width: 920px;
+  margin-inline: auto;
+}
+
+/* -------------
+header
+------------- */
+.header {
+  width: 100%;
+  height: 8rem;
+  background: transparent;
+  padding-left: 7.4074074074vw;
+  padding-right: 7.4074074074vw;
+}
+@media (max-width: 970px) {
+  .header {
+    height: 5rem;
+    padding-left: 2rem;
+    padding-right: 0;
+  }
+}
+
+.header__logo h1 a {
+  height: 8rem;
+  font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (max-width: 970px) {
+  .header__logo h1 a {
+    height: 5rem;
+  }
+}
+
+.header__nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 2.8703703704vw;
+     -moz-column-gap: 2.8703703704vw;
+          column-gap: 2.8703703704vw;
+}
+.header__nav ul li a {
+  font-size: 1.8rem;
+  height: 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+.header__nav ul li a:hover {
+  opacity: 0.7;
+}
+@media (max-width: 970px) {
+  .header__nav {
+    display: none;
+  }
+}
+
+.hamburger {
+  display: none;
+}
+@media (max-width: 970px) {
+  .hamburger {
+    position: relative;
+    display: block;
+    width: 7.2rem;
+    height: 5rem;
+    right: 0;
+    top: 0;
+    border: 1px solid #000;
+    margin-left: auto;
+  }
+  .hamburger span {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 3.2rem;
+    height: 0.3rem;
+    background: #4D9600;
+    border-radius: 9999px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  .hamburger span:nth-child(1) {
+    top: 19%;
+  }
+  .hamburger span:nth-child(3) {
+    top: 70%;
+  }
+  .hamburger.is-active span:nth-child(1) {
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+            transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .hamburger.is-active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.is-active span:nth-child(3) {
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+            transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
+/* ナビゲーション（中身） */
+.header__menu {
+  position: fixed;
+  width: 30rem;
+  top: 5rem;
+  right: 0;
+  bottom: 0;
+  color: #fff;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+}
+.header__menu ul {
+  margin: 0;
+  list-style: none;
+  font-size: 18px;
+}
+.header__menu ul li {
+  padding-left: 20px;
+  height: 5.8rem;
+  line-height: 1.8333333333;
+  background: #4D9600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header__menu.is-open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.header .inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }/*# sourceMappingURL=style.css.map */
