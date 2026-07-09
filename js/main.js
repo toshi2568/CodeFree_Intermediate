@@ -3,6 +3,11 @@ $("#js-hamburger").click(function() {
   $(".header__menu").toggleClass("is-open");
 });
 
+$(".header__menu a").click(function() {
+  $(".hamburger").removeClass("is-active");
+  $(".header__menu").removeClass("is-open");
+});
+
 const swiper = new Swiper(".mv__swiper", {
 
     loop: true,
@@ -20,7 +25,7 @@ $(".works__item").on("click", function() {
   const imgSrc = $(this).data("modal");
 
   const caption = $(this)
-    .find(".works__caption")
+    .find(".works-item__caption")
     .html()
     .replace(/<br[^>]*>/gi, " ");
 
@@ -45,4 +50,28 @@ window.addEventListener("scroll", () => {
   } else {
     header.classList.remove("is-scroll");
   }
+});
+
+const pageTop = document.querySelector(".page-top");
+
+window.addEventListener("scroll", () => {
+
+  if (window.scrollY > 300) {
+    pageTop.classList.add("is-show");
+  } else {
+    pageTop.classList.remove("is-show");
+  }
+
+});
+
+$(window).on("scroll", function() {
+  $(".js-fade").each(function() {
+    const targetTop = $(this).offset().top;
+    const scroll = $(window).scrollTop();
+    const windowHeight = $(window).height();
+
+    if (scroll > targetTop - windowHeight + 100) {
+      $(this).addClass("is-show");
+    }
+  });
 });
