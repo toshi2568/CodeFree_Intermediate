@@ -24,7 +24,6 @@ body {
 
 #container {
   width: 100%;
-  // overflow: hidden;
   overflow-x: clip;
 }
 
@@ -332,15 +331,10 @@ mv
 about
 ------------- */
 .about {
-  // padding-top: 8rem;
   position: relative;
-  // background-image: url("../images/about_pc.jpg");
-  // background-size: cover;
-  // background-position: center;
   height: 50rem;
   
   @media (max-width: 767px) {
-    // background-image: url("../images/about_sp.jpg");
     height: 58.4rem;
   } 
 }
@@ -387,7 +381,6 @@ about
   letter-spacing: 0.39em;
 
   @media (max-width: 767px) {
-    // font-size: calc(16 / 375 * 100vw);
     font-size: 1.6rem;
     top: 73.2%;
     left: 50%;
@@ -1091,7 +1084,6 @@ input[type="radio"]:checked + .radio::after {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  // cursor: pointer;
 }
 
 .form-area-gender {
@@ -1355,11 +1347,6 @@ input[type="radio"] {
   appearance: auto;
   -webkit-appearance: radio;
 }
-
-// input[type="checkbox"] {
-//   appearance: auto;
-//   -webkit-appearance: checkbox;
-// }
 
 /* -------------
 footer
