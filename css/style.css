@@ -1257,29 +1257,6 @@ contact
   }
 }
 
-.radio {
-  width: 2rem;
-  height: 2rem;
-  background: #fff;
-  border-radius: 50%;
-  position: relative;
-  margin-left: -0.2rem;
-  cursor: pointer;
-}
-
-input[type=radio]:checked + .radio::after {
-  content: "";
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  background: #000;
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
 .form-area-gender {
   margin-bottom: 4.3rem;
 }
@@ -1322,6 +1299,47 @@ input[type=radio]:checked + .radio::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.form-area-gender dd label input {
+  display: none;
+}
+.form-area-gender dd label input + span {
+  position: relative;
+  padding-left: 4.2rem;
+  font-size: 1.8rem;
+}
+@media (max-width: 767px) {
+  .form-area-gender dd label input + span {
+    padding-left: 3rem;
+  }
+}
+.form-area-gender dd label input + span::before {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: #fff;
+  border-radius: 50%;
+}
+.form-area-gender dd label input + span::after {
+  content: "";
+  width: 0.6rem;
+  height: 0.6rem;
+  background: #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0.7rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: none;
+}
+.form-area-gender dd label input:checked + span::after {
+  display: block;
 }
 @media (max-width: 767px) {
   .form-area-gender dd {
@@ -1425,67 +1443,58 @@ input[type=radio]:checked + .radio::after {
     gap: 0.5rem 0.2rem;
   }
 }
-
-dd label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.form-checkbox dd label input {
+  display: none;
+}
+.form-checkbox dd label input + span {
+  display: inline-block;
+  position: relative;
+  padding-left: 4.2rem;
   font-size: 1.8rem;
-  gap: 2rem;
 }
 @media (max-width: 767px) {
-  dd label {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    gap: 1rem;
+  .form-checkbox dd label input + span {
+    padding-left: 3rem;
     font-size: 1.6rem;
-    white-space: nowrap;
+    line-height: 1.5625;
   }
 }
-
-input[type=checkbox] {
-  -moz-appearance: none;
-       appearance: none;
-  -webkit-appearance: none;
+.form-checkbox dd label input + span::before {
+  content: "";
   width: 2rem;
   height: 2rem;
-  background: #fff;
-  border: none;
-  outline: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  position: relative;
-  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: #fff;
 }
-
-input[type=checkbox]:checked::after {
+.form-checkbox dd label input + span::after {
   content: "";
   position: absolute;
   left: 0.6rem;
-  top: 0.2rem;
+  top: 0.7rem;
   width: 0.6rem;
   height: 1.1rem;
   border: solid #000;
   border-width: 0 0.3rem 0.3rem 0;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+  display: none;
+}
+.form-checkbox dd label input:checked + span::after {
+  display: block;
 }
 
-.form-privacy-policy dt label {
+.form-privacy-policy dt h3 {
   display: block;
   font-size: 2rem;
   margin-top: 5rem;
   margin-bottom: 0.8rem;
 }
 @media (max-width: 767px) {
-  .form-privacy-policy dt label {
+  .form-privacy-policy dt h3 {
     margin-top: 3.1rem;
     margin-bottom: 0rem;
   }
