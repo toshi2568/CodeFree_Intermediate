@@ -5,11 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>株式会社北村建設興業</title>
   <meta name="description" content="株式会社北村建設興業の公式サイトです">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <meta name="format-detection" content="telephone=no">
 </head>
 <body id="top">
   <div id="container">
@@ -130,26 +134,26 @@
         </section>
         
         <!-- about -->
-        <section id="about" class="about js-fade">
+        <section id="about" class="about">
           <picture class="about__bg">
             <source media="(min-width: 768px)" srcset="./images/about_pc.jpg">
             <img src="./images/about_sp.jpg" alt="about_bg">
           </picture>
           <div class="about__inner">
-            <h2 class="about__title">伝統と<br class="tb-br">イマを<br class="tb-br">繋ぐ</h2>
+            <h2 class="about__title">伝統とイマを繋ぐ</h2>
             <p class="about__text">古来から伝わる伝統文化<br>昔からそこにある材料<br>その土地に長い間かけて<br>最適化してきた<br>たくさんのヒントを<br>イマを生きる私たちの<br>心地よさに取り入れ<br>新たな技術革新を<br>起こし続ける会社です</p>
           </div>
         </section>
 
-        <section id="service" class="service bg-color js-fade">
+        <section id="service" class="service bg-color">
           <div class="inner">
-            <h2 class="service__title section-title">
+            <h2 class="service__title section-title js-fade">
               <span class="section-title__large">SERVICE</span>
               <span class="section-title__small">サービス</span>
             </h2>
             <div class="service__items">
 
-              <div class="service__item service-item">
+              <div class="service__item service-item js-fade">
                 <div class="service__image-area">
                   <div class="service__image">
                     <picture>
@@ -173,7 +177,7 @@
                 </div>
               </div>
 
-              <div class="service__item service-item">
+              <div class="service__item service-item js-fade">
                 <div class="service__image-area">
                   <div class="service__image">
                     <picture>
@@ -197,7 +201,7 @@
                 </div>
               </div>
 
-              <div class="service__item service-item">
+              <div class="service__item service-item js-fade">
                 <div class="service__image-area">
                   <div class="service__image">
                     <picture>
@@ -220,17 +224,18 @@
                   </div>
                 </div>
               </div>
-        
+            </div>
+          </div>
         </section>
 
-        <section id="works" class="works js-fade">
+        <section id="works" class="works">
           <div class="inner">
-            <h2 class="works__title section-title">
+            <h2 class="works__title section-title js-fade">
               <span class="section-title__large">WORKS</span>
               <span class="section-title__small">施工事例</span>
             </h2>
             <div class="works__items">
-              <div class="works__item works-item" data-modal="./images/works_modal01.jpg">
+              <div class="works__item works-item js-fade" data-modal="./images/works_modal01.jpg">
                 <div class="works-item__image">
                   <picture>
                     <source media="(min-width: 768px)" srcset="./images/works01_pc.jpg">
@@ -241,7 +246,7 @@
                   <span>【新築】<br class="pc">長崎県T.O様自宅</span>
                 </div>
               </div>
-              <div class="works__item works-item" data-modal="./images/works_modal02.jpg">
+              <div class="works__item works-item js-fade" data-modal="./images/works_modal02.jpg">
                 <div class="works-item__image">
                   <picture>
                     <source media="(min-width: 768px)" srcset="./images/works02_pc.jpg">
@@ -252,7 +257,7 @@
                   <span>【リノベーション】<br>京都府カトリック丹波教会</span>
                 </div>
               </div>
-              <div class="works__item works-item" data-modal="./images/works_modal03.jpg">
+              <div class="works__item works-item js-fade" data-modal="./images/works_modal03.jpg">
                 <div class="works-item__image">
                   <picture>
                     <source media="(min-width: 768px)" srcset="./images/works03_pc.jpg">
@@ -260,10 +265,10 @@
                   </picture>
                 </div>
                 <div class="works-item__caption">
-                  <span>【新築】<br>東京都A.F様自宅件事務所</span>
+                  <span>【新築】<br>東京都A.F様自宅兼事務所</span>
                 </div>
               </div>
-              <div class="works__item works-item" data-modal="./images/works_modal04.jpg">
+              <div class="works__item works-item js-fade" data-modal="./images/works_modal04.jpg">
                 <div class="works-item__image">
                   <picture>
                     <source media="(min-width: 768px)" srcset="./images/works04_pc.jpg">
@@ -278,22 +283,22 @@
           </div>
         <div class="modal">
           <div class="modal__overlay"></div>
-
-        <div class="modal__content">
-          <button class="modal__close" id="js-modal-close">×</button>
-          <img class="modal__image" src="" alt="">
-          <div class="modal__caption"></div>
+          <div class="modal__content">
+            <button class="modal__close" id="js-modal-close">×</button>
+            <img class="modal__image" src="" alt="">
+            <div class="modal__caption"></div>
+          </div>
         </div>
         </section>
 
-        <section id="news" class="news bg-color js-fade">
+        <section id="news" class="news bg-color">
           <div class="inner">
-            <h2 class="news__title section-title">
+            <h2 class="news__title section-title js-fade">
               <span class="section-title__large">NEWS</span>
               <span class="section-title__small">お知らせ</span>
             </h2>
             <div class="news__blocks">
-              <div class="news__block news-block">
+              <div class="news__block news-block js-fade">
                 <h3 class="news-block__title">
                   <span>お知らせ</span>
                 </h3>
@@ -332,12 +337,12 @@
                 <a href="" class="news-block__link">
                   <span class="news-block__more">more</span>
                   <span class="news-block__arrow">
-                    <img src="./images/arrow.png" alt="arrow">
+                    <img src="./images/arrow.svg" alt="arrow">
                   </span>
                 </a>
               </div>
 
-              <div class="news__block news-block">
+              <div class="news__block news-block js-fade">
                 <h3 class="news-block__title">
                   <span>ブログ</span>
                 </h3>
@@ -376,7 +381,7 @@
                 <a href="" class="news-block__link">
                   <span class="news-block__more">more</span>
                   <span class="news-block__arrow">
-                    <img src="./images/arrow.png" alt="arrow">
+                    <img src="./images/arrow.svg" alt="arrow">
                   </span>
                 </a>
               </div>
@@ -385,18 +390,18 @@
           </div>
         </section>
 
-        <section id="company" class="company js-fade">
+        <section id="company" class="company">
           <div class="inner">
-            <h2 class="company__title section-title">
+            <h2 class="company__title section-title js-fade">
               <span class="section-title__large">COMPANY</span>
               <span class="section-title__small">会社概要</span>
             </h2>
             <div class="company__contents company-contents">
-              <div class="company__item company-item">
+              <div class="company__item company-item js-fade">
                 <div class="company-item__map">
                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6706.488864419497!2d129.83646171136994!3d32.81228788207236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356aad0ae40d2583%3A0xc715da862d399c4e!2z44CSODUyLTgwNjUg6ZW35bSO55yM6ZW35bSO5biC5qiq5bC-77yR5LiB55uu77yV4oiS77yT77yW!5e0!3m2!1sja!2sjp!4v1781343339001!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                <div class="company-item__info">
+                <address class="company-item__info">
                   <div class="company-item__info-inner">
                     <div class="company-item__name">
                       <p>株式会社 北村建設興業</p>
@@ -414,19 +419,19 @@
                       <a href="mailto:info@example.com">info@example.com</a>
                     </div>
                   </div>
-                </div>
+                </address>
               </div>
             </div>
           </div>
         </section>
 
-        <section id="contact" class="contact bg-color js-fade">
+        <section id="contact" class="contact bg-color">
           <div class="inner">
-            <h2 class="contact__title section-title">
+            <h2 class="contact__title section-title js-fade">
               <span class="section-title__large">CONTACT</span>
               <span class="section-title__small contact-small">お問い合わせ</span>
             </h2>
-            <div class="contact-sec__contents">
+            <div class="contact-sec__contents js-fade">
               <div class="contact-sec__text">
                 <p>３営業日以内にメールにてご連絡いたします。*は入力必須項目となります。</p>
               </div>
@@ -446,13 +451,13 @@
                     <dt>
                       <label for="your-gender">性別</label>
                     </dt>
-                    <dd class="form-radio">
-                      <label class="radio-item">
-                        <input type="radio" name="gender" value="男性">
+                    <dd>
+                      <label>
+                        <input type="radio" name="gender" value="male">
                         <span>男性</span>
                       </label>
-                      <label class="radio-item">
-                        <input type="radio" name="gender" value="女性">
+                      <label>
+                        <input type="radio" name="gender" value="female">
                         <span>女性</span>
                       </label>
                     </dd>

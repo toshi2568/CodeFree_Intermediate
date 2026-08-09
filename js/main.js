@@ -34,11 +34,13 @@ $(".works__item").on("click", function() {
   $(".modal__caption").html(caption);
 
   $(".modal").addClass("is-open");
+  $("body").addClass("is-fixed");
 
 });
 
 $(".modal__close, .modal__overlay").on("click", function() {
   $(".modal").removeClass("is-open");
+  $("body").removeClass("is-fixed");
 });
 
 const header = document.querySelector(".header");
@@ -75,3 +77,4 @@ $(window).on("scroll", function() {
     }
   });
 });
+
