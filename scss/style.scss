@@ -71,7 +71,11 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 6.8rem;
 
+  @media (max-width: 767px) {
+    margin-bottom: 4.2rem;
+  }
   span {
     display: block;
   }
@@ -91,7 +95,6 @@ img {
   letter-spacing: 0.3em;
   transform: translateX(0.1em);
   margin-top: 0.7rem;
-  margin-bottom: 6.8rem;
 
   @media (max-width: 767px) {
     font-size: 2rem;
@@ -99,7 +102,7 @@ img {
     letter-spacing: 0.3em;
     transform: translateX(0.1em);
     margin-top: 1rem;
-    margin-bottom: 4.2rem;
+    // margin-bottom: 4.2rem;
   }
 }
 
@@ -367,7 +370,7 @@ about
   letter-spacing: 0.16em;
 
   @media (max-width: 767px) {
-    font-size: 2.5rem;
+    font-size: calc(25 / 375 * 100vw);
     letter-spacing: 0.2em;
     margin-bottom: 2.4rem;
   }
@@ -381,7 +384,7 @@ about
 
   @media (max-width: 767px) {
     margin-right: 0;
-    font-size: 1.6rem;
+    font-size: calc(16 / 375 * 100vw);
     line-height: 1.62em;
     letter-spacing: 0.26em;
   }
@@ -391,22 +394,29 @@ about
 service
 ------------- */
 .service {
-  padding: 8rem 3rem 0;
+  padding: 8rem 3rem 8.2rem;
 
   @media (max-width: 767px) {
-    padding: 5rem 3rem 0;
+    padding: 5rem 3rem 5.1rem;
   }
 }
 
+.service__items {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8.2rem;
+
+  @media (max-width: 767px) {
+    row-gap: 5.1rem;
+  }
+}
 .service-item {
   display: flex;
   align-items: flex-end;
   position: relative;
-  padding-bottom: 8.2rem;
 
   @media (max-width: 767px) {
     display: block;
-    padding-bottom: 5.1rem;
   }
 }
 
@@ -606,29 +616,28 @@ works
   padding: 8rem 3rem 9.7rem 3rem;
 
   @media (max-width: 767px) {
-    padding: 5rem 3rem 2rem 3rem;
+    padding: 5rem 3rem 4rem 3rem;
   }
 }
 
 .works__items {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   column-gap: calc(40 / 880 * 100%);
 
   @media (max-width: 767px) {
-    flex-direction: column;
-    column-gap: 0;
+    grid-template-columns: 1fr;
+    gap: 2.2rem;
   }
 }
 
 .works__item {
-  width: calc(200 / 1080 * 100vw);
   transition: opacity 0.4s;
   cursor: pointer;
 
   @media (max-width: 767px) {
     width: 100%;
-    margin-bottom: 2.2rem;
+    // margin-bottom: 2.2rem;
   } 
 }
 
@@ -673,6 +682,7 @@ works
     position: absolute;
     inset: 0;
     background-color: rgba(0, 0, 0, 0.502);
+    cursor: pointer;
   }
 
   &__content {
@@ -714,6 +724,7 @@ works
       right: 0.3rem;
       font-size: calc(15 /1080 *100vw);
       color: #000;
+      cursor: pointer;
 
       @media (max-width: 767px) {
         font-size: calc(15 /375 *100vw);
@@ -906,7 +917,7 @@ company
   }
   &__info-inner {
     position: relative;
-    padding: 15% 9% 13% 12%;
+    padding: 17% 9% 11% 12%;
     width: 100%;
     z-index: 1;
     transform: translateY(5.2rem);
@@ -919,6 +930,7 @@ company
     &::before {
       content: "";
       position: absolute;
+      top: 2%;
       left: -56%;
       right: 0;
       bottom: 0;
@@ -1014,9 +1026,10 @@ contact
 ------------- */
 .contact {
   padding: 8rem 3rem;
+  background: rgba(#4D9600, 0.15);
 
   @media (max-width: 767px) {
-    padding: 5rem 3rem 5rem 3rem;
+    padding: 5rem 3rem;
   }
 }
 
@@ -1024,9 +1037,15 @@ contact
   max-width: 80rem;
 }
 
-.contact-small {
-  transform: translate(3.5%,-2%);
-  margin-bottom: 3.4rem;
+.contact__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3.8rem;
+
+  span {
+    display: block;
+  }
 }
 
 .contact-sec__contents {
@@ -1246,17 +1265,11 @@ contact
   dt {
     margin-top: 5rem;
     margin-bottom: 1rem;
+    font-size: 2rem;
 
     @media (max-width: 767px) {
       margin-top: 3rem;
       margin-bottom: 0rem;
-    }
-  }
-
-  dt div {
-    font-size: 2rem;
-
-    @media (max-width: 767px) {
       line-height: calc(27 / 20);
     }
   }
@@ -1326,6 +1339,11 @@ contact
       }
     }
   }
+
+.checkbox__label {
+  display: flex;
+  align-items: flex-start;
+}
 
 .form-privacy-policy {
   dt h3 {
