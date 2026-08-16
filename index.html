@@ -134,7 +134,7 @@
         </section>
         
         <!-- about -->
-        <section id="about" class="about">
+        <section id="about" class="about js-fade">
           <picture class="about__bg">
             <source media="(min-width: 768px)" srcset="./images/about_pc.jpg">
             <img src="./images/about_sp.jpg" alt="about_bg">
@@ -425,11 +425,11 @@
           </div>
         </section>
 
-        <section id="contact" class="contact bg-color">
+        <section id="contact" class="contact">
           <div class="inner">
-            <h2 class="contact__title section-title js-fade">
+            <h2 class="contact__title js-fade">
               <span class="section-title__large">CONTACT</span>
-              <span class="section-title__small contact-small">お問い合わせ</span>
+              <span class="section-title__small">お問い合わせ</span>
             </h2>
             <div class="contact-sec__contents js-fade">
               <div class="contact-sec__text">
@@ -448,9 +448,7 @@
                   </dl>
 
                   <dl class="form-area form-area-gender">
-                    <dt>
-                      <label for="your-gender">性別</label>
-                    </dt>
+                    <dt>性別</dt>
                     <dd>
                       <label>
                         <input type="radio" name="gender" value="male">
@@ -473,9 +471,7 @@
                   </dl>
 
                   <dl class="form-area">
-                    <dt>
-                      <label for="inquiry-type">問い合わせ種別</label>
-                    </dt>
+                    <dt>問い合わせ種別</dt>
                     <dd>
                       <select id="inquiry-type" class="form-select">
                         <option value="select">選択してください</option>
@@ -497,44 +493,56 @@
                   </dl>
 
                   <dl class="form-checkbox">
-                    <dt>
-                      <div>
-                        何を見て当社HPを知りましたか？ (複数回答可)　*
-                      </div>
-                    </dt>
+                    <dt>何を見て当社HPを知りましたか？ (複数回答可)　*</dt>
                     <dd>
-                      <label>
-                        <input type="checkbox" name="source[]" value="internet">
-                        <span>インターネット</span>
-                      </label>
-                      <label>
-                        <input type="checkbox" name="source[]" value="Flyer">
-                        <span>チラシ</span>
-                      </label>
-                      <label>
-                        <input type="checkbox" name="source[]" value="model home">
-                        <span>住宅展示場</span>
-                      </label>
-                      <label>
-                        <input type="checkbox" name="source[]" value="Sign">
-                        <span>看板</span>
-                      </label>
-                      <label>
-                        <input type="checkbox" name="source[]" value="SNS">
-                        <span>各種SNS</span>
-                      </label>
-                      <label>
-                        <input type="checkbox" name="source[]" value="referral">
-                        <span>紹介</span>
-                      </label>
-                      <label>
-                        <input type="checkbox" name="source[]" value="passing by">
-                        <span>通りがかり</span>
-                      </label>
-                      <label>
-                        <input type="checkbox" name="source[]" value="other">
-                        <span>その他</span>
-                      </label>
+                      <div class="checkbox__label">
+                        <label>
+                          <input type="checkbox" name="source[]" value="internet">
+                          <span>インターネット</span>
+                        </label>
+                      </div>
+                      <div class="checkbox__label">
+                        <label>
+                          <input type="checkbox" name="source[]" value="Flyer">
+                          <span>チラシ</span>
+                        </label>
+                      </div>
+                      <div class="checkbox__label">
+                        <label>
+                          <input type="checkbox" name="source[]" value="model home">
+                          <span>住宅展示場</span>
+                        </label>
+                      </div>
+                      <div class="checkbox__label">
+                        <label>
+                          <input type="checkbox" name="source[]" value="Sign">
+                          <span>看板</span>
+                        </label>
+                      </div>
+                      <div class="checkbox__label">
+                        <label>
+                          <input type="checkbox" name="source[]" value="SNS">
+                          <span>各種SNS</span>
+                        </label>
+                      </div>
+                      <div class="checkbox__label">
+                        <label>
+                          <input type="checkbox" name="source[]" value="referral">
+                          <span>紹介</span>
+                        </label>
+                      </div>
+                      <div class="checkbox__label">
+                        <label>
+                          <input type="checkbox" name="source[]" value="passing by">
+                          <span>通りがかり</span>
+                        </label>
+                      </div>
+                      <div class="checkbox__label">
+                        <label>
+                          <input type="checkbox" name="source[]" value="other">
+                          <span>その他</span>
+                        </label>
+                      </div>
                     </dd>
                   </dl>
 
